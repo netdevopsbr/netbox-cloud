@@ -1,0 +1,8 @@
+version = "0.0.1"
+name = "netbox-proxbox"
+verbose_name = "NetBox Cloud"
+description = "Making NetBox support Cloud environments"
+github_url = "https://github.com/netdevopsbr/netbox-cloud"
+author_name = "Emerson Felipe"
+author_email = "emerson@netdevopsbr.com"
+python_version = "3.8"
