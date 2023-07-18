@@ -14,3 +14,16 @@ class HomeView(View):
             request,
             self.template_name,
         )
+
+class ContainersView(View):
+    """Homepage"""
+    template_name = 'netbox_cloud/containers.html'
+
+    # service incoming GET HTTP requests
+    def get(self, request):
+        """Get request."""
+        
+        return render(
+            request,
+            self.template_name,
+        )
