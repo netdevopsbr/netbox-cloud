@@ -22,13 +22,16 @@ dev_requires = [
     'wheel'
 ]
 
+from env import *
+
+
 setup(
-    name="netbox-proxbox",
-    version=env.version,
-    author=env.author_name,
-    author_email=env.author_email,
-    description=env.description,
-    url=env.github_url,
+    name=CONFIG_VARIABLES.get("name"),
+    version=CONFIG_VARIABLES.get("version"),
+    author=CONFIG_VARIABLES.get("author_name"),
+    author_email=CONFIG_VARIABLES.get("author_email"),
+    description=CONFIG_VARIABLES.get("description"),
+    url=CONFIG_VARIABLES.get("github_url"),
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[
@@ -39,7 +42,7 @@ setup(
     ],
     keywords="netbox netbox-plugin plugin cloud proxmox private-cloud hypervisor",
     project_urls={
-        'Source': github,
+        'Source': CONFIG_VARIABLES.get("github_url"),
     },
     packages=find_packages(),
     include_package_data=True,
@@ -50,5 +53,5 @@ setup(
     extras_require={
         "dev": dev_requires,
     },
-    python_requires= f'>={env.python_version}',
+    python_requires= f'>={CONFIG_VARIABLES.get("python_version")}',
 )
